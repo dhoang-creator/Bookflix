@@ -1,23 +1,23 @@
+
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.10"
-
 
 lazy val root = (project in file("."))
   .settings(
     name := "Bookflix"
   )
 
-lazy val tapirVersion = "1.9.6"
+lazy val tapirVersion = "1.7.0"
 
 libraryDependencies ++= Seq(
 
   // Cats
   "org.typelevel"                     %% "cats-core"                        % "2.10.0",
-  "org.typelevel"                     %% "cats-effect"                      % "3.6-0142603",
+  "org.typelevel"                     %% "cats-effect"                      % "3.5.1",
 
   // Circe
-  "io.circe"                          %% "circe-core"                       % "0.15.0-M1",
+  "io.circe"                          %% "circe-core"                       % "0.14.5",
 
 // Tapir version
   "com.softwaremill.sttp.tapir"       %% "tapir-http4s-server"              % tapirVersion,
@@ -26,11 +26,11 @@ libraryDependencies ++= Seq(
   "com.softwaremill.sttp.tapir"       %% "tapir-json-circe"                 % tapirVersion,
 
   // Http4s
-  "org.http4s"                        %% "http4s-ember-server"              % "0.23.24",
-  "org.http4s"                        %% "http4s-circe"                     % "1.0-234-d1a2b53",
+//  "org.http4s"                        %% "http4s-ember-server"              % "0.23.24",
+//  "org.http4s"                        %% "http4s-circe"                     % "1.0-234-d1a2b53",
 
   // Logging
-  "ch.qos.logback"                    % "logback-classic"                   % "1.4.14",
+  "ch.qos.logback"                    % "logback-classic"                   % "1.3.14",
 
   // Testing
   "com.softwaremill.sttp.tapir"       %% "tapir-sttp-stub-server"           % tapirVersion        % Test,
