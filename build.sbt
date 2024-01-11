@@ -8,6 +8,8 @@ lazy val root = (project in file("."))
     name := "Bookflix"
   )
 
+scalacOptions += "-Ypartial-unification"
+
 lazy val tapirVersion = "1.7.0"
 
 libraryDependencies ++= Seq(
