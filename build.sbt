@@ -11,6 +11,7 @@ lazy val root = (project in file("."))
 scalacOptions += "-Ypartial-unification"
 
 lazy val tapirVersion = "1.7.0"
+lazy val circeVersion = "0.14.0-M5"
 
 libraryDependencies ++= Seq(
 
@@ -28,11 +29,13 @@ libraryDependencies ++= Seq(
   "com.softwaremill.sttp.tapir"       %% "tapir-json-circe"                 % tapirVersion,
 
   // Http4s
+
+  // Http4s
 //  "org.http4s"                        %% "http4s-ember-server"              % "0.23.24",
 //  "org.http4s"                        %% "http4s-circe"                     % "1.0-234-d1a2b53",
 
   // Logging
-  "ch.qos.logback"                    % "logback-classic"                   % "1.3.14",
+  "ch.qos.logback"                    % "logback-classic"                   % "1.4.7",
 
   // Testing
   "com.softwaremill.sttp.tapir"       %% "tapir-sttp-stub-server"           % tapirVersion        % Test,
